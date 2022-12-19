@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mô tả lớp xây dựng hcn</title>
+</head>
+<body>
+<div style="text-align: center">
+  <canvas id="myCanvass" width="800" height="500" style="border: 5px solid #ff00fb"></canvas>
+</div>
+<script>
+  class rectangle {
+    width;
+    height;
+    constructor(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+    setWidth(width) {
+      this.width = width;
+    }
+    setHeight(height) {
+      this.height = height;
+    }
+    getWidth() {
+      return this.width;
+    }
+    getHeight() {
+      return this.height;
+    }
+    getPerimeter(){
+      return (this.width + this.height)*2
+    }
+    getArea(){
+      return this.height*this.width
+    }
+    drawRectangle(ctx){
+        ctx.beginPath()
+        ctx.rect(50, 50, this.width, this.height)
+        ctx.stroke()
+        ctx.closePath()
+        ctx.beginPath()
+        ctx.font = "30px Arial"
+        ctx.fillText('chu vi là ' +this.getPerimeter(),100,200)
+        ctx.fillText('diện tích là '+this.getArea(),100,300)
+        ctx.stroke()
+        ctx.closePath()
+    }
+  }
+  let width = +prompt('nhap chieu rong')
+  let height = +prompt('nhap chieu dai')
+  let Rectangle = new rectangle(width, height)
+  let canvas = document.getElementById('myCanvass')
+  let ctx = canvas.getContext("2d")
+
+  Rectangle.drawRectangle(ctx)
+
+</script>
+</body>
+</html>

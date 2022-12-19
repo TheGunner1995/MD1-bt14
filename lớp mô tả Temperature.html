@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class temperature{
+    doC;
+    doF;
+    doK;
+
+    constructor(doC, doF, doK) {
+      this.doC = doC;
+      this.doF = doF;
+      this.doK = doK;
+    }
+    setDoC(doC) {
+      this.doC = doC;
+    }
+    setDoF(doF) {
+      this.doF = doF;
+    }
+    setDoK(doK) {
+      this.doK = doK;
+    }
+    getDoC() {
+      return this.doC;
+    }
+    getDoF() {
+      return this.doF;
+    }
+    getDoK() {
+      return this.doK;
+    }
+    getDoCSangF(){
+      return this.doC*1.8 + 32
+    }
+    getDoCSangK(){
+      return this.doC+273.5
+    }
+  }
+  let Temperature = new temperature(25)
+  let f = Temperature.getDoCSangF()
+  let k = Temperature.getDoCSangK()
+  document.write('do F là '+f)+'<br>'
+  document.write('do K là '+k)
+</script>
+</body>
+</html>

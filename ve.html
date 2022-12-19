@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+    <canvas id="myCanvas" width="800" height="500" style="border: 5px solid #ff00fb"></canvas>
+</div>
+<script>
+    let c = document.getElementById('myCanvas')
+    let ctx = c.getContext("2d")
+    ctx.beginPath()
+    ctx.rect(0, 0, 200, 50)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.arc(100, 100,50, 0, 2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+
+    ctx.beginPath()
+    ctx.rect(300, 0, 200, 50)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.arc(400, 100,50, 0, 2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+
+    ctx.beginPath()
+    ctx.rect(600, 0, 200, 50)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.arc(700, 100,50, 0, 2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+
+    ctx.beginPath()
+    ctx.arc(100, 400,50, 0, 2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.rect(0,450, 200, 50)
+    ctx.stroke()
+    ctx.closePath()
+
+    ctx.beginPath()
+    ctx.arc(400, 400,50, 0, 2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.rect(300,450, 200, 50)
+    ctx.stroke()
+    ctx.closePath()
+
+    ctx.beginPath()
+    ctx.arc(700, 400,50, 0, 2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.rect(600,450, 200, 50)
+    ctx.stroke()
+    ctx.closePath()
+
+
+
+</script>
+</body>
+</html>
